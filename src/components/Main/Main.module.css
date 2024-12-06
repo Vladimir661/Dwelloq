@@ -1,21 +1,21 @@
-.headerCust {
+.mainCust {
     padding: 20px 74px 55px 74px;
 }
 
 @media (max-width: 1200px) {
-    .headerCust{
+    .mainCust{
         padding: 20px 50px 55px 50px;
     }
 }
 
 @media (max-width: 768px) {
-    .headerCust{
+    .mainCust{
         padding: 20px 30px 55px 30px;
     }
 }
 
 @media (max-width: 576px) {
-    .headerCust{
+    .mainCust{
         padding: 20px 15px 55px 15px;
     }
 }
