@@ -3,7 +3,7 @@ import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LoginModal from '../Login/LoginModal';
-import styles from './Custonnavbar.module.css';
+import styles from './CustonNavbar.module.css';
 
 const CustomNavbar = ({ onBurgerToggle = () => {} }) => {
   const [showModal, setShowModal] = useState(false);
