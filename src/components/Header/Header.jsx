@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.module.css';
+import styles from './Header.module.css';
 import CustomNavbar from '../Navbar/CustomNavbar';
 import Title from '../Title/Title';
 import { useAuth } from '../Auth/Auth';
@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header id="home">
+    <header id="home" className={styles.headerCust}>
       <CustomNavbar 
         onBurgerToggle={handleBurgerToggle} 
         user={user}
