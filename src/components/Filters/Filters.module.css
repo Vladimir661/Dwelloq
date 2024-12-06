@@ -1,0 +1,131 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 42px 0 36px 0;
+}
+.mainButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.allFiltersBtn,
+.filtersToggleBtn {
+    background-color: transparent;
+    border: 2px solid rgba(255, 251, 251, 0.35);
+    border-radius: 8px;
+    color: rgba(255, 251, 251, 0.8);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.allFiltersBtn:hover,
+.filtersToggleBtn:hover {
+    color: rgb(255, 149, 5);
+    border-color: rgb(255, 149, 5);
+    box-shadow: 0 0 5px rgb(255, 149, 5);
+}
+.allFiltersBtn.active {
+    border-color: rgb(255, 149, 5);
+    color: rgb(255, 149, 5);
+    box-shadow: 0 0 5px rgb(255, 149, 5);
+}
+.filtersToggleBtn.active {
+    background-color: rgba(255, 149, 5, 0.1);
+}
+.filtersPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.allCustomBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+    font-size: 0.7rem;
+}
+.bedBtn,
+.bathBtn {
+    background-color: transparent;
+    width: 32%;
+    height: 42px;
+    border: 3px solid rgba(255, 251, 251, 0.35);
+    border-radius: 8px;
+    color: rgba(255, 251, 251, 0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+.active {
+    border: 3px solid rgb(255, 149, 5);
+    color: rgb(255, 149, 5);
+    box-shadow: 0 0 5px rgb(255, 149, 5), 0 0 5px rgb(255, 149, 5) inset;
+}
+.filtersPanel .active {
+    background-color: rgba(255, 149, 5, 0.1);
+}
+.priceRange {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.priceRange div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+}
+.priceRange label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: rgba(255, 251, 251, 0.8);
+}
+.priceRange input {
+    background-color: transparent;
+    border: 2px solid rgba(255, 251, 251, 0.35);
+    border-radius: 8px;
+    color: rgba(255, 251, 251, 0.8);
+    padding: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    -moz-appearance: textfield;
+}
+.priceRange input:focus {
+    outline: none;
+    border-color: rgb(255, 149, 5);
+    box-shadow: 0 0 5px rgb(255, 149, 5);
+}
+.priceRange input::-webkit-inner-spin-button,
+.priceRange input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.applyButton {
+    background-color: transparent;
+    border: 2px solid rgba(255, 251, 251, 0.35);
+    border-radius: 8px;
+    color: rgba(255, 251, 251, 0.8);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.applyButton:hover {
+    border: 3px solid rgb(255, 149, 5);
+    color: rgb(255, 149, 5);
+    box-shadow: 0 0 5px rgb(255, 149, 5), 0 0 5px rgb(255, 149, 5) inset;
+}
+@media (max-width: 576px) {
+    .allFiltersBtn,
+    .filtersToggleBtn{
+        font-size: 0.7rem;
+    }
+    .bedBtn,
+    .bathBtn{
+        font-size: 0.7rem;
+    }
+    .applyButton{
+        font-size: 0.7rem;
+    }
+}

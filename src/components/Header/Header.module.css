@@ -1,0 +1,27 @@
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0)), url(/bgimg/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 74px 55px 74px;
+    min-height: 48.6rem;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 50px 55px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px 55px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 20px 15px 55px 15px;
+    }
+}

@@ -1,0 +1,144 @@
+.reviews{
+    text-align: center;
+    padding: 56px 74px 70px 74px;
+}
+.title {
+    color: rgb(239, 127, 122);
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.title {
+    color: rgb(239, 127, 122);
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+.title::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(239, 127, 122);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.title:hover::before {
+    width: 100%;
+}
+.allReviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 25px 0 25px 0;
+}
+.reviewCard{
+    padding: 26px 15px 15px 10px;
+    width: 23rem;
+    height: 14rem;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.icon{
+    display: flex;
+    justify-content: start;
+}
+.name{
+    color: rgb(0, 0, 0);
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+.text{
+    padding: 35px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.button button{
+    background: transparent;
+    border: none;
+}
+.left, .right{
+    color: rgba(255, 251, 251, 0.65);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.left :hover{
+    color: rgb(255, 149, 5);
+    box-shadow: border 0 0 5px rgb(255, 149, 5);
+}
+.right:hover{
+    color: rgb(255, 149, 5);
+    box-shadow: border 0 0 5px rgb(255, 149, 5);
+}
+@media (max-width: 1200px) {
+   .reviews {
+        padding: 56px 50px 70px 50px;
+    }
+    .reviewCard{
+        width: 19rem;
+    }
+    .card{
+        gap: 5px;
+    }
+}
+.textFocusIn {
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.textBlurOut {
+    animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes text-focus-in {
+    0% {
+    filter: blur(12px);
+    opacity: 0;
+    }
+    100% {
+    filter: blur(0px);
+    opacity: 1;
+    }
+}
+@keyframes text-blur-out {
+    0% {
+    filter: blur(0px);
+    opacity: 1;
+    }
+    100% {
+    filter: blur(12px);
+    opacity: 0;
+    }
+}
+@media (max-width: 992px){
+    .allReviews{
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 768px) {
+   .reviews {
+        padding: 36px 30px 50px 30px;
+    }
+}
+@media (max-width: 576px) {
+   .reviews {
+        padding: 36px 15px 50px 15px;
+    }
+    .allReviews{
+        justify-content: center;
+    }
+}
