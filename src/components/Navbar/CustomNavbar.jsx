@@ -28,7 +28,7 @@ const CustomNavbar = ({ onBurgerToggle = () => {} }) => {
     <>
       <Navbar expand="lg" className={`${styles.navbar} py-3`}>
         <Container>
-          <Navbar.Brand href="#" className={styles.logo}>
+          <Navbar.Brand href="/#" className={styles.logo}>
             <img src="/logo/Logo-3.png" alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle
