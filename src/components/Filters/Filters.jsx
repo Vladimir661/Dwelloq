@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 
 function Filters({ onFilterChange }) {
+  const BEDROOM_OFFSET = 1;
+  const BATHROOM_OFFSET = 3;
+  const MAX_PRICE = 10000000;
+
   const [activeButtons, setActiveButtons] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
   const [priceRange, setPriceRange] = useState([null, null]);
@@ -19,7 +23,13 @@ function Filters({ onFilterChange }) {
   };
 
   const handlePriceChange = (e, type) => {
-    const value = e.target.value === '' ? null : Number(e.target.value);
+    const rawValue = e.target.value;
+    const value = rawValue === '' ? null : Number(rawValue);
+
+    if (value !== null && (isNaN(value) || value < 0 || value > MAX_PRICE)) {
+      return;
+    }
+
     setPriceRange((prev) => {
       if (type === 'min') return [value, prev[1]];
       if (type === 'max') return [prev[0], value];
@@ -28,14 +38,13 @@ function Filters({ onFilterChange }) {
   };
 
   const handleApplyFilters = () => {
-
     const bedFilters = activeButtons
-      .filter(i => i < 3)
-      .map(i => i + 1);
+      .filter(i => i < BATHROOM_OFFSET)
+      .map(i => i + BEDROOM_OFFSET);
 
     const bathFilters = activeButtons
-      .filter(i => i >= 3)
-      .map(i => i - 2);
+      .filter(i => i >= BATHROOM_OFFSET)
+      .map(i => i - (BATHROOM_OFFSET - BEDROOM_OFFSET));
 
     const updatedFilters = {
       bed: bedFilters,
@@ -110,7 +119,7 @@ function Filters({ onFilterChange }) {
                 id="maxPrice"
                 value={priceRange[1] || ''}
                 onChange={(e) => handlePriceChange(e, 'max')}
-                placeholder="Price up to 10.000.000"
+                placeholder={`Price up to ${MAX_PRICE.toLocaleString()}`}
               />
             </div>
             <button className={styles.applyButton} onClick={handleApplyFilters}>
