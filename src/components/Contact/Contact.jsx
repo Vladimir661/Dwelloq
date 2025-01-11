@@ -59,7 +59,7 @@ function Contact() {
                     <h1>Follow Us</h1>
                     <div className={styles.link}>
                         <a href="https://github.com/Vladimir661"><FontAwesomeIcon icon="fa-brands fa-github" size="xl" /></a>
-                        <a href="https://www.linkedin.com/in/володимир-зозуля-674504311/"><FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" /></a>
+                        <a href="https://www.linkedin.com/in/volodymyr-zozulia-674504311"><FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" /></a>
                         <a href="https://x.com/mrxsssss696?s=21"><FontAwesomeIcon icon="fa-brands fa-x-twitter" size="xl" /></a>
                     </div>
                 </div>
