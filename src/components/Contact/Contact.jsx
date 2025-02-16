@@ -51,7 +51,7 @@ function Contact() {
                     </span>
                     <h6>Sales</h6>
                     <span>
-                        Mobile: +380 93 4212751
+                        Mobile: +380 93 4212751 <br></br>
                         Email: xphigota@gmail.com
                     </span>
                 </div>
